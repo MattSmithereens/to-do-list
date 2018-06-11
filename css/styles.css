@@ -1,0 +1,7 @@
+ul .todo:hover {
+  text-decoration: underline;
+}
+
+ul.done {
+  text-decoration: line-through;
+}

@@ -3,11 +3,6 @@ function Task(task) {
   this.isDone = false;
 }
 
-// var newTask = {
-//   taskName: "walk the dog",
-// }
-
-
 $(document).ready(function() {
   $("#submit").click(function(e) {
     e.preventDefault();
@@ -16,7 +11,14 @@ $(document).ready(function() {
     var newTask = new Task(inputtedTask);
     //display the newTask.taskName to to-do tasks List
 
-    $("ul.toDo").append("<li class='list-item'>" + newTask.taskName + "</li>")
+    $("ul.toDo").append("<li class='todo list-item'>" + newTask.taskName + "</li>")
+    $("#taskInput").val("");
+
+
+    $("ul.toDo").children("li").last().click(function(){
+      $("ul.done").prepend("<li class='completed list-item'>" + newTask.taskName + "</li>")
+      $(this).remove();
+    });
 
   })
 })
