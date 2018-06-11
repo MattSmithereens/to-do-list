@@ -4,7 +4,7 @@ function Task(task) {
 }
 
 $(document).ready(function() {
-  $("#submit").click(function(e) {
+  $("#to-do").submit(function(e) {
     e.preventDefault();
 
     var inputtedTask = $("input#taskInput").val();

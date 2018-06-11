@@ -1,3 +1,7 @@
+body {
+  font-size: 18px;
+}
+
 ul .todo:hover {
   text-decoration: underline;
 }
