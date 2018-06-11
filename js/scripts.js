@@ -14,7 +14,6 @@ $(document).ready(function() {
     $("ul.toDo").append("<li class='todo list-item'>" + newTask.taskName + "</li>")
     $("#taskInput").val("");
 
-
     $("ul.toDo").children("li").last().click(function(){
       $("ul.done").prepend("<li class='completed list-item'>" + newTask.taskName + "</li>")
       $(this).remove();
